@@ -1,7 +1,7 @@
 function getTime() {
-  document.getElementsByTagName("p")[0].innerText = new Intl.DateTimeFormat("en-US", {
+  document.getElementsByTagName("p")[0].innerText = new Intl.DateTimeFormat((navigator.language || "en-US"), {
     dateStyle: "full",
-    timeStyle: "medium",
+    timeStyle: "full",
   }).format(new Date());
 }
 getTime();
