@@ -1,3 +1,6 @@
+if("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js", {scope: "/"});
+}
 function getTime() {
   document.getElementsByTagName("p")[0].innerText = new Intl.DateTimeFormat((navigator.language || "en-US"), {
     dateStyle: "full",
